@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GUNSAK DU TRAIL ULTRA - Run the Mountain. Earn the Summit.</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* CSS Reset */
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      :root {
+          --primary-green: #1a472a;
+          --dark-green: #0d2818;
+          --light-green: #2d8f6a;
+          --accent-orange: #e67e22;
+          --dark-orange: #d35400;
+          --dark-gray: #2c3e50;
+          --medium-gray: #7f8c8d;
+          --light-gray: #ecf0f1;
+          --white: #ffffff;
+          --black: #000000;
+          --text-dark: #2c3e50;
+          --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      body {
+          font-family: 'Open Sans', sans-serif;
+          line-height: 1.6;
+          color: var(--text-dark);
+          background-color: var(--white);
+          overflow-x: hidden;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+          margin-bottom: 1rem;
+      }
+
+      .container {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+      }
+
+      .section-padding {
+          padding: 80px 0;
+      }
+
+      .section-title {
+          text-align: center;
+          margin-bottom: 50px;
+          position: relative;
+      }
+
+      .section-title h2 {
+          font-size: 2.5rem;
+          color: var(--dark-green);
+          display: inline-block;
+          padding-bottom: 15px;
+      }
+
+      .section-title h2::after {
+          content: '';
+          position: absolute;
+          width: 100px;
+          height: 3px;
+          background-color: var(--accent-orange);
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+
+      /* Header */
+      header {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background-color: rgba(255, 255, 255, 0.98);
+          z-index: 1000;
+          box-shadow: var(--shadow);
+          transition: all 0.3s ease;
+      }
+
+      .header-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px 0;
+      }
+
+      .logo {
+          display: flex;
+          align-items: center;
+      }
+
+      .logo-text {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 1.8rem;
+          font-weight: 800;
+          color: var(--dark-green);
+          text-transform: uppercase;
+          letter-spacing: 1px;
+      }
+
+      .logo-text span {
+          color: var(--accent-orange);
+      }
+
+      .logo-subtitle {
+          font-size: 0.7rem;
+          color: var(--medium-gray);
+          margin-top: -5px;
+          letter-spacing: 2px;
+      }
+
+      /* Navigation */
+      nav ul {
+          display: flex;
+          list-style: none;
+      }
+
+      nav ul li {
+          margin-left: 30px;
+      }
+
+      nav ul li a {
+          text-decoration: none;
+          color: var(--dark-gray);
+          font-weight: 600;
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          transition: color 0.3s ease;
+          padding: 5px 0;
+          position: relative;
+      }
+
+      nav ul li a::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          background-color: var(--accent-orange);
+          bottom: 0;
+          left: 0;
+          transition: width 0.3s ease;
+      }
+
+      nav ul li a:hover {
+          color: var(--accent-orange);
+      }
+
+      nav ul li a:hover::after {
+          width: 100%;
+      }
+
+      .mobile-menu-btn {
+          display: none;
+          background: none;
+          border: none;
+          font-size: 1.5rem;
+          color: var(--dark-green);
+          cursor: pointer;
+      }
+
+      /* Hero Section */
+      .hero {
+          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                      url('https://images.unsplash.com/photo-1456613820599-bfe244172af5?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          color: var(--white);
+          padding-top: 80px;
+      }
+
+      .hero-content {
+          max-width: 800px;
+          margin: 0 auto;
+      }
+
+      .hero h1 {
+          font-size: 4rem;
+          font-weight: 800;
+          margin-bottom: 1.5rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          line-height: 1.1;
+      }
+
+      .hero-subtitle {
+          font-size: 1.8rem;
+          font-weight: 600;
+          color: var(--accent-orange);
+          margin-bottom: 2rem;
+          letter-spacing: 1px;
+      }
+
+      .hero-description {
+          font-size: 1.2rem;
+          margin-bottom: 3rem;
+          max-width: 700px;
+          margin-left: auto;
+          margin-right: auto;
+          opacity: 0.9;
+      }
+
+      .btn {
+          display: inline-block;
+          background-color: var(--accent-orange);
+          color: var(--white);
+          padding: 15px 40px;
+          border-radius: 5px;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 1rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          transition: all 0.3s ease;
+          border: 2px solid var(--accent-orange);
+      }
+
+      .btn:hover {
+          background-color: transparent;
+          color: var(--accent-orange);
+          transform: translateY(-3px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* About Section */
+      .about {
+          background-color: var(--light-gray);
+      }
+
+      .about-content {
+          display: flex;
+          align-items: center;
+          gap: 50px;
+      }
+
+      .about-text {
+          flex: 1;
+      }
+
+      .about-text p {
+          margin-bottom: 1.5rem;
+          font-size: 1.1rem;
+      }
+
+      .about-image {
+          flex: 1;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: var(--shadow);
+      }
+
+      .about-image img {
+          width: 100%;
+          height: auto;
+          display: block;
+      }
+
+      /* Categories Section */
+      .categories {
+          background-color: var(--white);
+      }
+
+      .categories-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 30px;
+      }
+
+      .category-card {
+          background-color: var(--white);
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: var(--shadow);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .category-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .category-header {
+          background-color: var(--primary-green);
+          color: var(--white);
+          padding: 20px;
+          text-align: center;
+      }
+
+      .category-header h3 {
+          font-size: 1.5rem;
+          margin-bottom: 5px;
+      }
+
+      .category-body {
+          padding: 25px;
+      }
+
+      .category-details {
+          list-style: none;
+      }
+
+      .category-details li {
+          margin-bottom: 15px;
+          padding-left: 25px;
+          position: relative;
+      }
+
+      .category-details li::before {
+          content: '✓';
+          color: var(--accent-orange);
+          font-weight: bold;
+          position: absolute;
+          left: 0;
+      }
+
+      /* Registration Section */
+      .registration {
+          background-color: var(--light-gray);
+      }
+
+      .registration-form-container {
+          max-width: 800px;
+          margin: 0 auto;
+          background-color: var(--white);
+          border-radius: 10px;
+          padding: 40px;
+          box-shadow: var(--shadow);
+      }
+
+      .form-row {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          margin-bottom: 20px;
+      }
+
+      .form-group {
+          margin-bottom: 20px;
+      }
+
+      .form-group label {
+          display: block;
+          margin-bottom: 8px;
+          font-weight: 600;
+          color: var(--dark-gray);
+      }
+
+      .form-control {
+          width: 100%;
+          padding: 12px 15px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-family: 'Open Sans', sans-serif;
+          font-size: 1rem;
+          transition: border-color 0.3s ease;
+      }
+
+      .form-control:focus {
+          outline: none;
+          border-color: var(--accent-orange);
+      }
+
+      .btn-submit {
+          width: 100%;
+          background-color: var(--accent-orange);
+          color: var(--white);
+          border: none;
+          padding: 15px;
+          border-radius: 5px;
+          font-size: 1.1rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      }
+
+      .btn-submit:hover {
+          background-color: var(--dark-orange);
+      }
+
+      /* Contact Section */
+      .contact-info {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 30px;
+          margin-top: 40px;
+      }
+
+      .contact-item {
+          text-align: center;
+          padding: 30px 20px;
+          background-color: var(--white);
+          border-radius: 10px;
+          box-shadow: var(--shadow);
+      }
+
+      .contact-icon {
+          font-size: 2.5rem;
+          color: var(--accent-orange);
+          margin-bottom: 15px;
+      }
+
+      /* Footer */
+      footer {
+          background-color: var(--dark-green);
+          color: var(--white);
+          padding: 60px 0 20px;
+      }
+
+      .footer-content {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 40px;
+          margin-bottom: 40px;
+      }
+
+      .footer-logo {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 2rem;
+          font-weight: 800;
+          margin-bottom: 10px;
+      }
+
+      .footer-logo span {
+          color: var(--accent-orange);
+      }
+
+      .footer-description {
+          opacity: 0.8;
+          margin-bottom: 20px;
+      }
+
+      .footer-title {
+          font-size: 1.2rem;
+          margin-bottom: 20px;
+          color: var(--accent-orange);
+      }
+
+      .footer-links {
+          list-style: none;
+      }
+
+      .footer-links li {
+          margin-bottom: 10px;
+      }
+
+      .footer-links a {
+          color: var(--white);
+          text-decoration: none;
+          opacity: 0.8;
+          transition: opacity 0.3s ease;
+      }
+
+      .footer-links a:hover {
+          opacity: 1;
+          color: var(--accent-orange);
+      }
+
+      .copyright {
+          text-align: center;
+          padding-top: 20px;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          opacity: 0.7;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 992px) {
+          .hero h1 {
+              font-size: 3rem;
+          }
+
+          .hero-subtitle {
+              font-size: 1.5rem;
+          }
+
+          .about-content {
+              flex-direction: column;
+          }
+
+          .form-row {
+              grid-template-columns: 1fr;
+          }
+      }
+
+      @media (max-width: 768px) {
+          nav ul {
+              display: none;
+              position: absolute;
+              top: 100%;
+              left: 0;
+              width: 100%;
+              background-color: var(--white);
+              flex-direction: column;
+              padding: 20px;
+              box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          }
+
+          nav ul.active {
+              display: flex;
+          }
+
+          nav ul li {
+              margin: 10px 0;
+          }
+
+          .mobile-menu-btn {
+              display: block;
+          }
+
+          .hero h1 {
+              font-size: 2.5rem;
+          }
+
+          .section-title h2 {
+              font-size: 2rem;
+          }
+      }
+
+      @media (max-width: 576px) {
+          .hero h1 {
+              font-size: 2rem;
+          }
+
+          .hero-subtitle {
+              font-size: 1.2rem;
+          }
+
+          .registration-form-container {
+              padding: 25px;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <div>
+            <div class="logo-text">GUNSAK<span>DU</span> TRAIL</div>
+            <div class="logo-subtitle">ULTRA RUNNING EVENT</div>
+          </div>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav>
+          <ul id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#categories">Kategori</a></li>
+            <li><a href="#registration">Pendaftaran</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h1>GUNSAK DU TRAIL ULTRA</h1>
+          <div class="hero-subtitle">Run the Mountain. Earn the Summit.</div>
+          <p class="hero-description">
+            Event ultra trail run yang menguji batas fisik dan mental di medan
+            teknikal Gunung Sasak, Kuripan Selatan, Lombok Barat. Tantang diri
+            Anda dalam lomba lari trail dengan elevasi ekstrem dan pemandangan
+            alam yang memukau.
+          </p>
+          <a href="#registration" class="btn">Daftar Sekarang</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-padding" id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>Tentang Event</h2>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              <strong>GUNSAK DU TRAIL ULTRA</strong> adalah event lari trail
+              yang diselenggarakan di Gunung Sasak, Kuripan Selatan, Lombok
+              Barat. Event ini diinisiasi oleh komunitas trail lokal
+              @gunsak.academia dan dirancang untuk menguji fisik, mental, dan
+              daya juang pelari melalui medan teknikal dan elevasi ekstrem.
+            </p>
+            <p>
+              Dengan tiga kategori lomba yang disesuaikan dengan tingkat
+              kemampuan pelari, GUNSAK DU TRAIL ULTRA menjadi ajang bagi pelari
+              pemula hingga ultra runner berpengalaman untuk menantang diri di
+              medan pegunungan yang menakjubkan.
+            </p>
+            <p>
+              Selain sebagai kompetisi, event ini juga bertujuan untuk
+              memperkenalkan keindahan alam Gunung Sasak dan sekitarnya, serta
+              membangun komunitas trail running yang solid di wilayah Lombok dan
+              Nusa Tenggara Barat.
+            </p>
+          </div>
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+              alt="Gunung Sasak Trail Running"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories section-padding" id="categories">
+      <div class="container">
+        <div class="section-title">
+          <h2>Kategori Lomba</h2>
+        </div>
+
+        <div class="categories-grid">
+          <!-- Category 1 -->
+          <div class="category-card">
+            <div class="category-header">
+              <h3>6K FUN TRAIL</h3>
+              <p>Untuk Pemula & Pelari Rekreasi</p>
+            </div>
+            <div class="category-body">
+              <ul class="category-details">
+                <li><strong>Jarak:</strong> 6 KM</li>
+                <li><strong>Elevation Gain:</strong> ±380 meter</li>
+                <li>
+                  <strong>Rute:</strong> Start Kantor Desa Kuripan Selatan –
+                  Puncak Gunung Sasak –  mengelilingi gunung – Finish
+                  Basecamp
+                </li>
+                <li><strong>Cut Off Time:</strong> 2 Jam</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="category-card">
+            <div class="category-header">
+              <h3>18K TRAIL MIX ROAD</h3>
+              <p>Untuk Pelari Menengah</p>
+            </div>
+            <div class="category-body">
+              <ul class="category-details">
+                <li><strong>Jarak:</strong> 18 KM</li>
+                <li><strong>Elevation Gain:</strong> ±420 meter</li>
+                <li>
+                  <strong>Rute:</strong> Rute trail Gunung Sasak dilanjutkan
+                  jalur aspal mengelilingi gunung
+                </li>
+                <li><strong>Cut Off Time:</strong> 5 Jam</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="category-card">
+            <div class="category-header">
+              <h3>50K ULTRA LOOP</h3>
+              <p>Kategori Ekstrem</p>
+            </div>
+            <div class="category-body">
+              <ul class="category-details">
+                <li><strong>Jarak:</strong> 50 KM</li>
+                <li><strong>Elevation Gain:</strong> ±7.000 meter</li>
+                <li><strong>Rute:</strong> Naik-turun Gunung Sasak ±30 kali</li>
+                <li><strong>Cut Off Time:</strong> 25 Jam</li>
+                <li>
+                  <strong>Catatan:</strong> Kategori ekstrem, hanya untuk pelari
+                  berpengalaman
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="registration section-padding" id="registration">
+      <div class="container">
+        <div class="section-title">
+          <h2>Pendaftaran</h2>
+        </div>
+
+        <div class="registration-form-container">
+          <form
+            id="registrationForm"
+            method="post"
+            action="mailto:gunsakdutrailultra@gmail.com"
+            enctype="text/plain"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Nama Lengkap *</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="birthDate">Tanggal Lahir *</label>
+                <input
+                  type="date"
+                  id="birthDate"
+                  name="birthDate"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Alamat Lengkap *</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nik">Nomor NIK / PASPORT *</label>
+                <input
+                  type="text"
+                  id="nik"
+                  name="nik"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="nationality">Warga Negara *</label>
+                <select
+                  id="nationality"
+                  name="nationality"
+                  class="form-control"
+                  required
+                >
+                  <option value="">Pilih Warga Negara</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="Asing">Asing</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="postalCode">Kode Pos *</label>
+                <input
+                  type="text"
+                  id="postalCode"
+                  name="postalCode"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="whatsapp">Nomor WhatsApp *</label>
+                <input
+                  type="tel"
+                  id="whatsapp"
+                  name="whatsapp"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="category">Pilih Kategori Lomba *</label>
+              <select
+                id="category"
+                name="category"
+                class="form-control"
+                required
+              >
+                <option value="">Pilih Kategori</option>
+                <option value="6K FUN TRAIL">6K FUN TRAIL</option>
+                <option value="18K TRAIL MIX ROAD">18K TRAIL MIX ROAD</option>
+                <option value="50K ULTRA LOOP">50K ULTRA LOOP</option>
+              </select>
+            </div>
+
+            <input
+              type="hidden"
+              name="subject"
+              value="Pendaftaran GUNSAK DU TRAIL ULTRA"
+            />
+
+            <button type="submit" class="btn-submit">Daftar Sekarang</button>
+
+            <div
+              id="formMessage"
+              style="margin-top: 20px; padding: 15px; border-radius: 5px; display: none;"
+            ></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section-padding" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Kontak Kami</h2>
+        </div>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <h3>Instagram Event</h3>
+            <p>@gunsakultra</p>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <h3>Instagram Komunitas</h3>
+            <p>@gunsak_academia</p>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <h3>WhatsApp Contact</h3>
+            <p>0858-0423-1555</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <div class="footer-logo">GUNSAK<span>DU</span> TRAIL</div>
+            <p class="footer-description">
+              Event ultra trail run di Gunung Sasak, Kuripan Selatan, Lombok
+              Barat. Run the Mountain. Earn the Summit.
+            </p>
+          </div>
+
+          <div class="footer-links-section">
+            <h4 class="footer-title">Menu</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">Tentang Event</a></li>
+              <li><a href="#categories">Kategori Lomba</a></li>
+              <li><a href="#registration">Pendaftaran</a></li>
+              <li><a href="#contact">Kontak</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h4 class="footer-title">Kontak</h4>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Gunung Sasak, Lombok Barat
+              </li>
+              <li><i class="fas fa-phone"></i> 0858-0423-1555</li>
+              <li>
+                <i class="fas fa-envelope"></i> gunsakdutrailultra@gmail.com
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>
+            &copy; 2026 GUNSAK DU TRAIL ULTRA. Semua Hak Dilindungi. | Organized
+            by Gunsak Academia
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const navMenu = document.getElementById('navMenu');
+
+      mobileMenuBtn.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+          mobileMenuBtn.innerHTML = navMenu.classList.contains('active')
+              ? '<i class="fas fa-times"></i>'
+              : '<i class="fas fa-bars"></i>';
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll('nav a').forEach(link => {
+          link.addEventListener('click', () => {
+              navMenu.classList.remove('active');
+              mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+          });
+      });
+
+      // Form Submission Handler
+      const registrationForm = document.getElementById('registrationForm');
+      const formMessage = document.getElementById('formMessage');
+
+      registrationForm.addEventListener('submit', function(e) {
+          // Collect form data
+          const formData = new FormData(this);
+          const data = Object.fromEntries(formData.entries());
+
+          // Validate form
+          if (!validateForm(data)) {
+              e.preventDefault();
+              return;
+          }
+
+          // Set the subject for the email
+          const subjectInput = this.querySelector('input[name="subject"]');
+          const fullName = data.fullName;
+          const category = data.category;
+          subjectInput.value = `Pendaftaran GUNSAK DU TRAIL ULTRA - ${fullName} - ${category}`;
+
+          // Show success message
+          showFormMessage('success', 'Form berhasil disiapkan. Anda akan diarahkan ke aplikasi email untuk mengirimkan pendaftaran ke panitia.');
+
+          // The form will automatically submit to mailto: which opens email client
+          // We'll let the default behavior happen
+      });
+
+      function validateForm(data) {
+          // Basic validation
+          if (!data.fullName || !data.birthDate || !data.whatsapp || !data.email || !data.category) {
+              showFormMessage('error', 'Harap isi semua field yang wajib diisi.');
+              return false;
+          }
+
+          // WhatsApp validation
+          const whatsappRegex = /^[0-9]{10,15}$/;
+          if (!whatsappRegex.test(data.whatsapp.replace(/\D/g, ''))) {
+              showFormMessage('error', 'Nomor WhatsApp tidak valid.');
+              return false;
+          }
+
+          // Email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(data.email)) {
+              showFormMessage('error', 'Alamat email tidak valid.');
+              return false;
+          }
+
+          return true;
+      }
+
+      function showFormMessage(type, message) {
+          formMessage.textContent = message;
+          formMessage.style.display = 'block';
+
+          if (type === 'success') {
+              formMessage.style.backgroundColor = '#d4edda';
+              formMessage.style.color = '#155724';
+              formMessage.style.border = '1px solid #c3e6cb';
+          } else if (type === 'error') {
+              formMessage.style.backgroundColor = '#f8d7da';
+              formMessage.style.color = '#721c24';
+              formMessage.style.border = '1px solid #f5c6cb';
+          }
+
+          // Auto hide after 5 seconds
+          setTimeout(() => {
+              formMessage.style.display = 'none';
+          }, 5000);
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+              e.preventDefault();
+
+              const targetId = this.getAttribute('href');
+              if (targetId === '#') return;
+
+              const targetElement = document.querySelector(targetId);
+              if (targetElement) {
+                  window.scrollTo({
+                      top: targetElement.offsetTop - 80,
+                      behavior: 'smooth'
+                  });
+              }
+          });
+      });
+
+      // Header scroll effect
+      window.addEventListener('scroll', () => {
+          const header = document.querySelector('header');
+          if (window.scrollY > 100) {
+              header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+          } else {
+              header.style.boxShadow = 'none';
+          }
+      });
+    </script>
+  </body>
+</html>
